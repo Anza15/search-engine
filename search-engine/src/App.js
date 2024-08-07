@@ -1,25 +1,43 @@
 import logo from './logo.svg';
+import Weather from './Weather';
+import axios from 'axios';
 import './App.css';
+import WeatherForecast from './WeatherForecast';
+import WeatherForecastt from './WeatherForecastt';
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+       <div className="container">
+      
+       <h1>Weather App</h1>
+       <Weather defaultCity="Pretoria"/>
+      
+          <footer>
+            This project was coded by {""}
+            <a href="#" target="_blank"
+            rel="noopener noreferrer">
+            Anza Mukhithi
+          </a>{""}
+          and is {""}
+          <a href="https://github/Anza15/search-enginee" target="_blank"
+          rel="noopener noreferrer">
+            open-source on Github
+
+            and {""}
+            <a
+            href="https://comforting-kelpie-221e18.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
+          </a>
+  
         </a>
-      </header>
-    </div>
+      </footer>
+      </div>
+      </div>
   );
 }
 
-export default App;
